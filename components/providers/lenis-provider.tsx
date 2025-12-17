@@ -9,23 +9,26 @@ export default function LenisProvider({
   children: React.ReactNode;
 }) {
   useEffect(() => {
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
     const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
-      gestureOrientation: "vertical",
+      duration: isMobile ? 2.2 : 1.8,
+      easing: (t) => 1 - Math.pow(1 - t, 5),
       smoothWheel: true,
-      touchMultiplier: 2,
+      wheelMultiplier: isMobile ? 0.45 : 0.65,
+      touchMultiplier: isMobile ? 0.6 : 0.8,
     });
 
-    function raf(time: number) {
+    let rafId: number;
+    const raf = (time: number) => {
       lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+      rafId = requestAnimationFrame(raf);
+    };
 
-    requestAnimationFrame(raf);
+    rafId = requestAnimationFrame(raf);
 
     return () => {
+      cancelAnimationFrame(rafId);
       lenis.destroy();
     };
   }, []);

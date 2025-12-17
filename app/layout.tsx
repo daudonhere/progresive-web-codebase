@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import LenisProvider from "@/components/providers/lenis-provider";
+import ClientProviders from "@/components/providers/client-provider";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -10,21 +10,26 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: "#ffffff",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className="font-tommy-regular min-h-screen overflow-x-hidden no-scrollbar">
-        <LenisProvider>
-            <main className="w-full min-h-screen">
-              {children}
-            </main>
-        </LenisProvider>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/icons/chain.svg" type="image/x-icon" />
+      </head>
+      <body className="flex min-h-screen overflow-x-hidden font-tommy-regular">
+        <ClientProviders>
+          {children}
+        </ClientProviders>
       </body>
     </html>
   );

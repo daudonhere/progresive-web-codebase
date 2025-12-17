@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
@@ -21,10 +21,39 @@ export default function SignupSection({ onSwitchView }: SignupSectionProps) {
   const [isVerif, setIsVerif] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isTimerActive, setIsTimerActive] = useState(false);
+  const [countdown, setCountdown] = useState(15);
+
+  const startTimer = () => {
+    setCountdown(15);
+    setIsTimerActive(true);
+  };
 
   const toggleVerifVisibility = () => {
-    setIsVerif(!isVerif);
+    setIsVerif(true);
+    startTimer();
   };
+
+  const handleResendOtp = () => {
+    startTimer();
+    console.log("Re-Sending OTP...");
+  };
+
+  useEffect(() => {
+    if (!isTimerActive) return;
+
+    const interval = setInterval(() => {
+      setCountdown((prev) => {
+        if (prev <= 1) {
+          setIsTimerActive(false);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [isTimerActive]);
 
   return (
     <div className="flex flex-1 flex-col gap-2 h-full p-2">
@@ -58,6 +87,24 @@ export default function SignupSection({ onSwitchView }: SignupSectionProps) {
                       <InputOTPSlot index={5} />
                     </InputOTPGroup>
                   </InputOTP>
+
+                  <div className="flex flex-2 w-full justify-center">
+                    {isTimerActive ? (
+                      <p className="text-sm font-base tracking-wider opacity-40">
+                        Re-send OTP in {countdown} second..
+                      </p>
+                    ) : (
+                      <Button
+                        variant="primary"
+                        onClick={handleResendOtp}
+                        className="flex flex-row w-1/2 items-center"
+                      >
+                        <h4 className="text-sm font-base tracking-widest">
+                          Resend OTP
+                        </h4>
+                      </Button>
+                    )}
+                  </div>
                 </div>
               </>
             ) : (

@@ -1,6 +1,6 @@
 "use client";
 
-import { Home, ShoppingBag, History, User } from "lucide-react";
+import { Home, ShoppingBag, ReceiptText, User } from "lucide-react";
 
 export default function BottomNavbar() {
   return (
@@ -8,7 +8,7 @@ export default function BottomNavbar() {
       <div className="flex justify-around py-3 text-xs text-gray-400">
         <NavItem label="Beranda" active icon={<Home size={25} />} />
         <NavItem label="Paket" icon={<ShoppingBag size={25} />} />
-        <NavItem label="Transaksi" icon={<History size={25} />} />
+        <NavItem label="Tagihan" icon={<ReceiptText size={25} />} />
         <NavItem label="Akun" icon={<User size={25} />} />
       </div>
     </nav>

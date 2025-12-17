@@ -31,7 +31,7 @@ export default function HistorySection() {
             "
           >
             <p className="text-xs text-gray-500">Paket Internet</p>
-            <p className="text-sm font-bold">30 Day</p>
+            <p className="text-sm font-bold">30 Hari</p>
             <p className="text-xs text-gray-500">123 Mbps</p>
             <p className="mt-2 text-xs text-red-600 font-semibold">
               Beli Lagi

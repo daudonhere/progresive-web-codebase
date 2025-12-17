@@ -20,7 +20,7 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="flex min-h-screen w-full justify-center bg-secondary">
+    <main className="flex min-h-dvh w-full justify-center bg-secondary">
       {children}
     </main>
   );

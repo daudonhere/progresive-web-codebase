@@ -2,7 +2,7 @@
 
 import {
   ArrowUpCircle,
-  FileText,
+  ArrowDownCircle,
   BarChart3,
   Activity,
 } from "lucide-react";
@@ -29,8 +29,8 @@ export default function WalletSection() {
           label="Upgrade"
         />
         <ActionItem
-          icon={<FileText size={22} />}
-          label="Tagihan"
+          icon={<ArrowDownCircle size={22} />}
+          label="Downgrade"
         />
         <ActionItem
           icon={<BarChart3 size={22} />}
@@ -57,7 +57,7 @@ function ActionItem({
       <div className="flex h-12 w-12 items-center justify-center rounded-full bg-red-100 text-red-600 shadow-sm">
         {icon}
       </div>
-      <span className="text-xs font-semibold text-gray-700">
+      <span className="text-[10px] font-semibold text-gray-700">
         {label}
       </span>
     </button>

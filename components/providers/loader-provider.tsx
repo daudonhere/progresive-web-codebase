@@ -51,7 +51,7 @@ export default function LoaderProvider({
             transition={{ duration: 0.4, ease: "easeInOut" }}
             className="fixed inset-0 z-9999 flex items-center justify-center bg-background/60 backdrop-blur-lg"
           >
-            <ThreeDot variant="bounce" color="#fc0a0a" size="medium" />
+            <ThreeDot variant="bounce" color="#f70a0a" size="medium" />
           </motion.div>
         )}
       </AnimatePresence>

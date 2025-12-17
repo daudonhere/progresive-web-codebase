@@ -1,13 +1,19 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
+@font-face {
+  font-family: 'nexa';
+  src: url('/fonts/nexa.ttf') format('truetype');
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-nexa: var(--font-nexa);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -79,6 +85,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --font-nexa: 'nexa', monospace;
 }
 
 @layer base {

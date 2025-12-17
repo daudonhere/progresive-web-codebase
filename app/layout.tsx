@@ -19,9 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex font-tommy-regular min-h-screen overflow-x-hidden overflow-y-scroll no-scrollbar">
+      <body className="font-tommy-regular min-h-screen overflow-x-hidden no-scrollbar">
         <LenisProvider>
-          {children}
+            <main className="w-full min-h-screen">
+              {children}
+            </main>
         </LenisProvider>
       </body>
     </html>

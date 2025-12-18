@@ -4,8 +4,8 @@ export default function HistorySection() {
   return (
     <div className="flex flex-col gap-3">
       <div className="flex justify-between text-sm font-bold">
-        <span>Riwayat Transaksi</span>
-        <span className="text-red-600 text-xs">Selengkapnya</span>
+        <span>Riwayat</span>
+        <span className="text-primary-theme text-xs">Selengkapnya</span>
       </div>
 
       <div
@@ -26,14 +26,14 @@ export default function HistorySection() {
             className="
               w-[42%] max-w-200px shrink-0
               snap-start
-              rounded-xl bg-white p-3
-              shadow-xl border border-gray-300/50
+              rounded-xl bg-background p-3
+              shadow-xl border border-ring/50
             "
           >
-            <p className="text-xs text-gray-500">Paket Internet</p>
+            <p className="text-xs text-muted-foreground">Paket Internet</p>
             <p className="text-sm font-bold">30 Hari</p>
-            <p className="text-xs text-gray-500">123 Mbps</p>
-            <p className="mt-2 text-xs text-red-600 font-semibold">
+            <p className="text-xs text-muted-foreground">123 Mbps</p>
+            <p className="mt-2 text-xs text-primary-theme font-semibold">
               Beli Lagi
             </p>
           </div>

@@ -7,17 +7,17 @@ import {
   Activity,
 } from "lucide-react";
 
-export default function WalletSection() {
+export default function CardSection() {
   return (
-    <div className="w-full rounded-2xl bg-white border border-gray-300/50 p-4 shadow-xl">
+    <div className="w-full rounded-2xl bg-background border border-ring/50 p-4 shadow-xl">
       <div className="flex flex-row justify-between">
         <div className="flex flex-col">
-          <p className="text-sm text-gray-500">Paket Internet</p>
+          <p className="text-sm text-muted-foreground">Paket Internet</p>
           <p className="text-lg font-extrabold">Rp 123.687</p>
-          <p className="text-xs italic text-gray-500">123 Mbps</p>
+          <p className="text-xs italic text-muted-foreground">123 Mbps</p>
         </div>
         <div className="flex items-center">
-          <button className="rounded-lg bg-red-600 px-3 py-2 text-xs font-bold text-white shadow">
+          <button className="rounded-lg bg-primary-theme px-3 py-2 text-xs font-bold text-primary-theme-foreground shadow">
             Perbarui
           </button>
         </div>
@@ -54,10 +54,10 @@ function ActionItem({
 }) {
   return (
     <button className="flex flex-col items-center gap-2 focus:outline-none">
-      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-red-100 text-red-600 shadow-sm">
+      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-theme/20 text-primary-theme shadow-sm">
         {icon}
       </div>
-      <span className="text-[10px] font-semibold text-gray-700">
+      <span className="text-[10px] font-semibold text-muted-foreground">
         {label}
       </span>
     </button>

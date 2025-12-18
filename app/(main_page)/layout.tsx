@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import HeaderSection from "./sections/header";
-import BottomNavbar from "./sections/navbar";
+import BottomNavigation from "./sections/navigation";
 
 export const metadata: Metadata = {
   title: "Dashboard - Zona Hotspot",
@@ -34,13 +34,13 @@ export default function MainLayout({
           className="
             flex flex-1 flex-col
             overflow-y-auto no-scrollbar
-            pb-24
+            pb-6
           "
         >
           {children}
         </div>
         <div className="sticky bottom-0 z-50 h-20">
-          <BottomNavbar />
+          <BottomNavigation />
         </div>
       </div>
     </main>

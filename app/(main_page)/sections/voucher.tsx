@@ -3,8 +3,9 @@
 import { subscribeUserToPush } from "@/libs/push-client";
 import { subscribePush } from "@/actions/push";
 
-export default function PromoCardSection() {
-  const handleUsePromo = async () => {
+export default function VoucherCardSection() {
+
+  const handleUseVoucher = async () => {
     if (!("Notification" in window)) return;
 
     const permission = await Notification.requestPermission();
@@ -26,38 +27,38 @@ export default function PromoCardSection() {
       </div>
 
       <div className="relative overflow-hidden rounded-xl bg-primary-theme p-4 text-background shadow-xl border-2 border-ring/50">
-        <p className="text-lg font-extrabold">Disc 50% + 20%</p>
-        <p className="text-xs opacity-90">Travel to Any Beach</p>
+        <p className="text-lg font-extrabold">10 Mbps</p>
+        <p className="text-xs opacity-90">2 Jam Unlimited</p>
 
         <button
-          onClick={handleUsePromo}
+          onClick={handleUseVoucher}
           className="absolute bottom-4 right-4 rounded-lg bg-background px-4 py-1 text-xs font-bold text-primary-theme shadow"
         >
-          Gunakan
+          Pesan
         </button>
       </div>
 
       <div className="relative overflow-hidden rounded-xl bg-primary-theme p-4 text-background shadow-xl border-2 border-ring/50">
-        <p className="text-lg font-extrabold">Disc 50% + 20%</p>
-        <p className="text-xs opacity-90">Travel to Any Beach</p>
+        <p className="text-lg font-extrabold">5 Mbps</p>
+        <p className="text-xs opacity-90">6 Jam Unlimited</p>
 
         <button
-          onClick={handleUsePromo}
+          onClick={handleUseVoucher}
           className="absolute bottom-4 right-4 rounded-lg bg-background px-4 py-1 text-xs font-bold text-primary-theme shadow"
         >
-          Gunakan
+          Pesan
         </button>
       </div>
 
       <div className="relative overflow-hidden rounded-xl bg-primary-theme p-4 text-background shadow-xl border-2 border-ring/50">
-        <p className="text-lg font-extrabold">Disc 50% + 20%</p>
-        <p className="text-xs opacity-90">Travel to Any Beach</p>
+        <p className="text-lg font-extrabold">10 Mbps</p>
+        <p className="text-xs opacity-90">24 Jam Unlimited</p>
 
         <button
-          onClick={handleUsePromo}
+          onClick={handleUseVoucher}
           className="absolute bottom-4 right-4 rounded-lg bg-background px-4 py-1 text-xs font-bold text-primary-theme shadow"
         >
-          Gunakan
+          Pesan
         </button>
       </div>
     </div>

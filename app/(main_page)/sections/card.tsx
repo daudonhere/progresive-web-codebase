@@ -13,8 +13,8 @@ export default function CardSection() {
       <div className="flex flex-row justify-between">
         <div className="flex flex-col">
           <p className="text-sm text-muted-foreground">Paket Internet</p>
-          <p className="text-lg font-extrabold">Rp 123.687</p>
-          <p className="text-xs italic text-muted-foreground">123 Mbps</p>
+          <p className="text-lg font-extrabold">Rp 300.000</p>
+          <p className="text-xs text-muted-foreground">30 Mbps</p>
         </div>
         <div className="flex items-center">
           <button className="rounded-lg bg-primary-theme px-3 py-2 text-xs font-bold text-primary-theme-foreground shadow">

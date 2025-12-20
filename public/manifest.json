@@ -4,27 +4,27 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "name": "Progressive Web Codebase",
-  "short_name": "PWC",
+  "name": "Zonahotspot App",
+  "short_name": "zonahotspot",
   "description": "A cool PWA with Next.js, shadcn, and Zustand",
   "icons": [
     {
-      "src": "/icons/wifi.png",
+      "src": "/icons/zonahotspot.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/icons/wifi.png",
+      "src": "/icons/zonahotspot.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "/icons/wifi.png",
+      "src": "/icons/zonahotspot.png",
       "sizes": "384x384",
       "type": "image/png"
     },
     {
-      "src": "/icons/wifi.png",
+      "src": "/icons/zonahotspot.png",
       "sizes": "512x512",
       "type": "image/png"
     }

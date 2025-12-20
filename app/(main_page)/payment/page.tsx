@@ -44,6 +44,12 @@ export default function PaymentPage() {
             icon="/icons/payment/dana.png"
           />
 
+          <PaymentItem
+            title="OVO"
+            subtitle="Saldo OVO"
+            icon="/icons/payment/ovo.png"
+          />
+
           <p className="mt-2 text-xs font-semibold text-gray-500">
             Virtual Account
           </p>
@@ -67,6 +73,11 @@ export default function PaymentPage() {
             title="BNI"
             subtitle="Virtual Account"
             icon="/icons/payment/bni.png"
+          />
+          <PaymentItem
+            title="Seabank"
+            subtitle="Virtual Account"
+            icon="/icons/payment/seabank.png"
           />
 
         </div>

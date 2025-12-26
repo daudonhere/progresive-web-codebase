@@ -2,12 +2,28 @@
 
 import { useRouter } from "next/navigation";
 import { useLoaderStore } from "@/stores/loaderStore";
+import { useTransactionStore } from "@/stores/transactionStore";
 
 export default function InvoicePage() {
   const router = useRouter();
   const { startLoading } = useLoaderStore();
+  const { setInvoiceData } = useTransactionStore();
 
   const handlePayNow = () => {
+    // Save invoice data to store
+    setInvoiceData({
+      invoiceId: "INV-2025-000123",
+      date: "17 Des 2025",
+      status: "Menunggu Pembayaran",
+      customerName: "Saepul",
+      customerId: "ZH-0098123",
+      customerEmail: "john.doe@email.com",
+      packageName: "100 Mbps",
+      duration: "1 Bulan",
+      amount: 100000,
+      formattedAmount: "Rp 100.000",
+    });
+
     startLoading();
     router.push("/payment");
   };
